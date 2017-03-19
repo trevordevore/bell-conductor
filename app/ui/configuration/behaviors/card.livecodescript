@@ -11,7 +11,9 @@ on preOpenCard
   set the text of field "NoteSpeed" to appGetPref("note speed")
   set the text of field "StartDelay" to appGetPref("start delay")
   set the text of field "NoteList" to appGetPref("notes")
+  set the text of field "Tempo" to appGetPref("tempo")
   storeSet "notes", appGetPref("notes")
+  storeSet "tempo", appGetPref("tempo")
 
   focus on nothing
 end preOpenCard
@@ -54,8 +56,9 @@ command uiLoadSong
   set the text of field "Tempo" to word 1 to -1 of line 2 of pSongData
 
   appSetPref "notes", the text of field "NoteList"
+  appSetPref "tempo", the text of field "Tempo"
   storeSet "notes", appGetPref("notes")
-  storeSet "tempo", the text of field "Tempo"
+  storeSet "tempo", appGetPref("tempo")
  end LoadSongData
 
 
