@@ -13,9 +13,9 @@ shutdown when all windows are closed: false
 preferences:
   user:
     macos:
-      filename:
+      filename: com.trevordevore.bellconductor
     windows:
-      filename:
+      filename: com.trevordevore.bellconductor
     ios:
       filename: com.trevordevore.bellconductor
 ui:
