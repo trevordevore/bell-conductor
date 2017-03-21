@@ -12,8 +12,6 @@ on preOpenCard
   set the text of field "StartDelay" to appGetPref("start delay")
   set the text of field "NoteList" to appGetPref("notes")
   set the text of field "Tempo" to appGetPref("tempo")
-  storeSet "notes", appGetPref("notes")
-  storeSet "tempo", appGetPref("tempo")
 
   focus on nothing
 end preOpenCard
