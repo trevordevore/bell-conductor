@@ -5,9 +5,10 @@ encrypt stacks: false
 multiple instances: false
 relaunch in background: false
 application data:
-  folder:
-    user: false
-    shared: false
+  user:
+    folder:
+  shared:
+    folder:
 creator code:
 shutdown when all windows are closed: false
 preferences:
@@ -38,7 +39,7 @@ helpers:
     filename: {{FRAMEWORK}}/helpers/preferences
 build folder: ../builds
 build profiles:
-  default:
+  all profiles:
     post build script:
     macos:
       certificate name:
