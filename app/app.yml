@@ -4,11 +4,14 @@ build: 1
 encrypt stacks: false
 multiple instances: false
 relaunch in background: false
-application data:
+application data folder:
   user:
-    folder:
-  shared:
-    folder:
+    default:
+    macos:
+    windows:
+    linux:
+    ios:
+    android:
 creator code:
 shutdown when all windows are closed: false
 preferences:
@@ -41,7 +44,8 @@ build folder: ../builds
 build profiles:
   all profiles:
     post build script:
-    macos:
-      certificate name:
+    certificates:
+      macos:
+        name:
   release:
   beta:
