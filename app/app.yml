@@ -47,5 +47,9 @@ build profiles:
     certificates:
       macos:
         name:
+    copy files:
+      all platforms:
+        1:
+          filename: prefs.yml
   release:
   beta:
