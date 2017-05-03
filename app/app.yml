@@ -14,14 +14,10 @@ application data folder:
     android:
 creator code:
 shutdown when all windows are closed: false
-preferences:
+preferences filename:
   user:
-    macos:
-      filename: com.trevordevore.bellconductor
-    windows:
-      filename: com.trevordevore.bellconductor
-    ios:
-      filename: com.trevordevore.bellconductor
+    default: com.trevordevore.bellconductor
+    windows: Bell Conductor.prefs
 ui:
   1:
     folder: ./ui
