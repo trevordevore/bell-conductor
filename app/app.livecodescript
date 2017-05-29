@@ -7,9 +7,9 @@ end PreloadApplication
 
 
 command InitializeApplication
-  storeSet "notes", appGetPref("notes")
-  storeSet "tempo", appGetPref("tempo")
-  storeSet "note speed", appGetPref("note speed")
+  storeSet "notes", prefsGetPref("notes")
+  storeSet "tempo", prefsGetPref("tempo")
+  storeSet "note speed", prefsGetPref("note speed")
 end InitializeApplication
 
 

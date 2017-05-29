@@ -19,23 +19,17 @@ preferences filename:
     default: com.trevordevore.bellconductor
     windows: Bell Conductor.prefs
 ui:
-  1:
-    folder: ./ui
+  - folder: ./ui
 libraries:
-  1:
-    folder: ./libraries
+  - folder: ./libraries
 frontscripts:
-  1:
-    folder: ./frontscripts
+  - folder: ./frontscripts
 backscripts:
-  1:
-    folder: ./backscripts
+  - folder: ./backscripts
 behaviors:
-  1:
-    folder: ./behaviors
+  - folder: ./behaviors
 helpers:
-  1:
-    filename: {{FRAMEWORK}}/helpers/preferences
+  - filename: "[[FRAMEWORK]]/helpers/preferences"
 build folder: ../builds
 build profiles:
   all profiles:
@@ -45,7 +39,6 @@ build profiles:
         name:
     copy files:
       all platforms:
-        1:
-          filename: prefs.yml
+        - filename: prefs.yml
   release:
   beta:

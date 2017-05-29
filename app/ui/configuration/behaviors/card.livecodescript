@@ -8,10 +8,10 @@ on preOpenCard
   put item 2 of theRect + 320 into item 4 of theRect
   set the rect of this stack to theRect
 
-  set the text of field "NoteSpeed" to appGetPref("note speed")
-  set the text of field "StartDelay" to appGetPref("start delay")
-  set the text of field "NoteList" to appGetPref("notes")
-  set the text of field "Tempo" to appGetPref("tempo")
+  set the text of field "NoteSpeed" to prefsGetPref("note speed")
+  set the text of field "StartDelay" to prefsGetPref("start delay")
+  set the text of field "NoteList" to prefsGetPref("notes")
+  set the text of field "Tempo" to prefsGetPref("tempo")
 
   focus on nothing
 end preOpenCard
@@ -20,12 +20,12 @@ end preOpenCard
 on closeField
   switch the short name of the target
     case "NoteSpeed"
-      appSetPref "note speed", word 1 to -1 of line 1 of the text of the target
-      storeSet "note speed", appGetPref("note speed")
+      prefsSetPref "note speed", word 1 to -1 of line 1 of the text of the target
+      storeSet "note speed", prefsGetPref("note speed")
       break
     case "StartDelay"
-      appSetPref "start delay", word 1 to -1 of line 1 of the text of the target
-      storeSet "start delay", appGetPref("start delay")
+      prefsSetPref "start delay", word 1 to -1 of line 1 of the text of the target
+      storeSet "start delay", prefsGetPref("start delay")
       break
     default
       pass closeField
@@ -53,10 +53,10 @@ command uiLoadSong
   set the itemDelimiter to "-"
   set the text of field "Tempo" to word 1 to -1 of line 2 of pSongData
 
-  appSetPref "notes", the text of field "NoteList"
-  appSetPref "tempo", the text of field "Tempo"
-  storeSet "notes", appGetPref("notes")
-  storeSet "tempo", appGetPref("tempo")
+  prefsSetPref "notes", the text of field "NoteList"
+  prefsSetPref "tempo", the text of field "Tempo"
+  storeSet "notes", prefsGetPref("notes")
+  storeSet "tempo", prefsGetPref("tempo")
  end LoadSongData
 
 
