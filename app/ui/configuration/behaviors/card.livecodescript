@@ -41,12 +41,12 @@ command uiLoadSong
   answer file "Select song file"
   if it is empty then return empty
 
-   # Line 1: Target temp x,y
-   # Line 2: Default tempo
-   # Line 3-n: Notes note,count
+  # Line 1: Target temp x,y
+  # Line 2: Default tempo
+  # Line 3-n: Notes note,count
 
-   put URL("file:" & it) into tSongData
-   LoadSongData tSongData
+  put URL("file:" & it) into tSongData
+  LoadSongData tSongData
 end uiLoadSong
 
 
