@@ -22,7 +22,7 @@ end CancelMessage
 
 
 function PrintArray @pArray, pDimension, pFullData
-  local tKeys, tKey
+  local tKeys, tKey, tText
 
   if pDimension is empty then put 0 into pDimension
 
@@ -31,19 +31,18 @@ function PrintArray @pArray, pDimension, pFullData
 
   repeat for each line tKey in tKeys
     if pArray[tKey] is an array then
-     put _printCharXTimes(space, pDimension * 5) & tKey & cr after theText
-     put pArray[tKey] into theTempArray
-     put PrintArray(theTempArray, pDimension + 1, pFullData) after theText
-   else
-     if pFullData then
-      put _printCharXTimes(space, pDimension * 5) &  tKey & ":" && pArray[tKey] & cr after theText
+    put _printCharXTimes(space, pDimension * 5) & tKey & cr after tText
+      put PrintArray(pArray[tKey], pDimension + 1, pFullData) after tText
     else
-      put _printCharXTimes(space, pDimension * 5) &  tKey & ":" && line 1 of pArray[tKey] & cr after theText
+      if pFullData then
+        put _printCharXTimes(space, pDimension * 5) &  tKey & ":" && pArray[tKey] & cr after tText
+      else
+        put _printCharXTimes(space, pDimension * 5) &  tKey & ":" && line 1 of pArray[tKey] & cr after tText
+      end if
     end if
-  end if
-end repeat
+  end repeat
 
-return theText
+  return tText
 end PrintArray
 
 
