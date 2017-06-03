@@ -3,7 +3,7 @@
 Bell Conductor helps children play songs with bells. Kidsplay sells bells for children that use color to distinguish between different notes. [Click here](http://www.grothmusic.com/p-41-kidsplay-8-note-diatonic-handbell-set.aspx) to see a basic 8 note diatonic set.
 
 
-![Bell Conductor Example](https://github.com/trevordevore/bell-conductor)
+![Bell Conductor Example](https://github.com/trevordevore/bell-conductor/wiki/assets/images/bells-example.png)
 
 
 # Platform support
