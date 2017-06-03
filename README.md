@@ -15,7 +15,7 @@ Each line contains a comma-deimited list. Item 1 is the note which is created by
 
 Item 2 on each line is a decimal representing how long the note lasts. `.25` is a 1/4 note. `.125` is an 1/8th note.
 
-Here is the song file for **Away in a Manager**:
+Below is the song file for **Away in a Manager**. Bell Conductor will display all of the notes twice due to the `REPEAT` line at the end.
 
 ```
 G5,.25
