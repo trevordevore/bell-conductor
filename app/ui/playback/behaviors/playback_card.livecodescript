@@ -43,7 +43,7 @@ end closeCard
 
 on mouseDoubleDown
   if the environment is "development" then
-    go previous card
+    go stack "Configuration" in window (the short name of this stack)
   end if
 end mouseDoubleDown
 
