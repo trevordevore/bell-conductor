@@ -47,10 +47,10 @@ command uiLoadSong
 
    put URL("file:" & it) into tSongData
    LoadSongData tSongData
- end uiLoadSong
+end uiLoadSong
 
 
- command LoadSongData pSongData
+command LoadSongData pSongData
   set the text of field "LblTargetTempo" to "Target Tempo:" && line 1 of pSongData
   set the text of field "NoteList" to line 3 to -1 of pSongData
 
@@ -61,15 +61,15 @@ command uiLoadSong
   prefsSetPref "tempo", the text of field "Tempo"
   storeSet "notes", prefsGetPref("notes")
   storeSet "tempo", prefsGetPref("tempo")
- end LoadSongData
+end LoadSongData
 
 
- command uiPlaySong
+command uiPlaySong
   go stack "Playback" in window (the short name of this stack)
- end uiPlaySong
+end uiPlaySong
 
 
- command uiToggleFullscreen
+command uiToggleFullscreen
   if the fullscreen of this stack then
     set the fullscreen of this stack to false
   else
