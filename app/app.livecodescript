@@ -47,6 +47,7 @@ end OpenApplication
 command PreShutdownApplication
   # Called before the application shuts down.
   # Perform any cleanup.
+  prefsSave
 end PreShutdownApplication
 
 
