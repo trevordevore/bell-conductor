@@ -15,9 +15,9 @@ command CancelMessage pMsg, pTargetObject
     put the pendingMessages into tMessages
     filter tMessages with "*" & tString & "*"
     repeat for each line tMessage in tMessages
-     cancel item 1 of tMessage
-   end repeat
- end repeat
+      cancel item 1 of tMessage
+    end repeat
+  end repeat
 end CancelMessage
 
 
