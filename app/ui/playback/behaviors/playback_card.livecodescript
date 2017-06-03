@@ -190,6 +190,7 @@ command DeleteNote pControl
   end if
 end DeleteNote
 
+
 on aeMoveDone
   local tRect
   put the rect of the target into tRect
