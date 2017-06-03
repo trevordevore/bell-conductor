@@ -1,12 +1,14 @@
 script "Configuration Card Behavior"
 on preOpenCard
+  local tRect
+
   if the environment is "mobile" then
     mobileSetAllowedOrientations "landscape right"
   end if
-  put the rect of this stack into theRect
-  put item 1 of theRect + 480 into item 3 of theRect
-  put item 2 of theRect + 320 into item 4 of theRect
-  set the rect of this stack to theRect
+  put the rect of this stack into tRect
+  put item 1 of tRect + 480 into item 3 of tRect
+  put item 2 of tRect + 320 into item 4 of tRect
+  set the rect of this stack to tRect
 
   set the text of field "NoteSpeed" to prefsGetPref("note speed")
   set the text of field "StartDelay" to prefsGetPref("start delay")
@@ -34,6 +36,8 @@ end closeField
 
 
 command uiLoadSong
+  local tSongData
+
   answer file "Select song file"
   if it is empty then return empty
 
@@ -41,8 +45,8 @@ command uiLoadSong
    # Line 2: Default tempo
    # Line 3-n: Notes note,count
 
-   put URL("file:" & it) into theSongData
-   LoadSongData theSongData
+   put URL("file:" & it) into tSongData
+   LoadSongData tSongData
  end uiLoadSong
 
 
