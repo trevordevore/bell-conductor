@@ -25,9 +25,14 @@ end closeCard
 
 on mouseDoubleDown
   if the target is me and the environment is "development" then
-    go stack "Configuration" in window (the short name of this stack)
+    uiReturnToConfig
   end if
 end mouseDoubleDown
+
+
+command uiReturnToConfig
+  go stack "Configuration" in window (the short name of this stack)
+end uiReturnToConfig
 
 
 command GenerateNotes
