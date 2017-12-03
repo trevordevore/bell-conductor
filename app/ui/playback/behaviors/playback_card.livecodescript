@@ -42,7 +42,7 @@ end closeCard
 
 
 on mouseDoubleDown
-  if the environment is "development" then
+  if the target is me and the environment is "development" then
     go stack "Configuration" in window (the short name of this stack)
   end if
 end mouseDoubleDown
