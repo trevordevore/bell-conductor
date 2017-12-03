@@ -69,6 +69,11 @@ command uiPlaySong
 end uiPlaySong
 
 
+command uiShowNotesInSong
+  go stack "ShowNotes" in window (the short name of this stack)
+end uiShowNotesInSong
+
+
 command uiToggleFullscreen
   if the fullscreen of this stack then
     set the fullscreen of this stack to false
