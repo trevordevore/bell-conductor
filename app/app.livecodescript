@@ -40,6 +40,7 @@ command OpenApplication
   # Called after InitializeApplication.
   # Open UI stack
 
+  set the fullscreenmode of stack "Configuration" to "letterBox"
   go stack "Configuration"
 end OpenApplication
 
